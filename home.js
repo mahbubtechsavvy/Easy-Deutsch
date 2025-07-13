@@ -142,7 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
         keySound.play();
     }
     
-    // INITIALIZE THE PAGE
+    // --- THIS IS THE NEW PART FOR THE AUTO-GROWING TEXT BOX ---
+    function autoResize() {
+        customTextInput.style.height = 'auto'; // 1. Reset the height
+        customTextInput.style.height = customTextInput.scrollHeight + 'px'; // 2. Set it to the content's height
+    }
+    // We add the 'input' event listener to watch for typing
+    customTextInput.addEventListener('input', autoResize);
+
+    // --- INITIALIZE THE PAGE ---
     renderAlphabetGrid();
     renderKeyboard();
 });
