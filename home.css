@@ -185,8 +185,13 @@ body {
     border: 2px solid #bdc3c7;
     border-radius: 8px;
     font-size: 1rem;
+    font-family: 'Poppins', sans-serif; /* Ensures font matches the rest of the site */
     transition: border-color 0.3s;
+    resize: none; /* Disables the user's ability to manually resize the box */
+    overflow-y: hidden; /* Hides the vertical scrollbar until it's needed */
+    line-height: 1.6; /* Adds some space between lines for readability */
 }
+
 #custom-text:focus {
     outline: none;
     border-color: #ff9933;
