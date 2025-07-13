@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Deutsch</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- THE MAIN FIX: Credit and social links are now inside the header -->
+        <header class="main-header">
+            <h1>Easy Deutsch</h1>
+            <p class="credit-text">Created by Mahbubur Rahman</p>
+            <div class="social-links">
+                <a href="https://github.com/your-username" target="_blank" title="GitHub">GH</a>
+                <a href="https://linkedin.com/in/your-username" target="_blank" title="LinkedIn">IN</a>
+                <a href="https://facebook.com/your-username" target="_blank" title="Facebook">FB</a>
+                <a href="https://instagram.com/your-username" target="_blank" title="Instagram">IG</a>
+            </div>
+        </header>
+        
+        <!-- Alphabet Section -->
+        <section class="card alphabet-card">
+            <h2 class="section-title">🇩🇪 German Alphabet</h2>
+            <div id="alphabet-grid"></div>
+        </section>
+
+        <!-- Vocabulary List Section -->
+        <section class="card">
+            <h2 class="section-title">Learn these words</h2>
+            <ul class="vocab-list">
+                <li><span class="german-word">Hallo</span> <button class="listen-btn">🔊</button></li>
+                <li><span class="german-word">Danke</span> <button class="listen-btn">🔊</button></li>
+                <li><span class="german-word">Bitte</span> <button class="listen-btn">🔊</button></li>
+                <li><span class="german-word">Auf Wiedersehen</span> <button class="listen-btn">🔊</button></li>
+            </ul>
+        </section>
+
+        <!-- Word Tester & Translation Section -->
+        <section class="card">
+            <h2 class="section-title">Check any German word</h2>
+            <p>Type a word or use the keyboard below.</p>
+            <div class="input-group">
+                <input type="text" id="custom-text" placeholder="e.g., Entschuldigung">
+                <button id="pronounce-btn">🔊</button>
+            </div>
+            <div id="translation-result-box" class="hidden">
+                <div class="translation-header">Bangla Translation</div>
+                <div id="bangla-translation" class="translation-text"></div>
+            </div>
+            <div id="custom-keyboard"></div>
+        </section>
+    </div>
+    
+    <!-- Main script file -->
+    <script src="home.js"></script>
+</body>
+</html>

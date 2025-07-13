@@ -1,0 +1,285 @@
+/* ---- Google Fonts Import ---- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap');
+
+/* ---- General Body and Container Styles ---- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8; 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* ---- Main Header & Credit Styles ---- */
+.main-header {
+    text-align: center;
+    padding: 20px 20px 30px 20px; /* Adjusted padding */
+    margin-bottom: 30px;
+}
+.main-header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: #2c3e50;
+}
+.main-header .credit-text {
+    margin: 4px 0 15px 0;
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+.main-header .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    background-color: #e9ecef;
+    color: #34495e;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.main-header .social-links a:hover {
+    background-color: #ff9933;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ---- General Card and Section Styles ---- */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+.section-title {
+    margin-top: 0;
+    color: #ff9933;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+}
+.card p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* ---- Alphabet Grid Section ---- */
+#alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+}
+.alphabet-key-box {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    position: relative; /* This is the container for the button */
+}
+.alpha-letter-main {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1;
+}
+.alpha-bangla-pron {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+.alpha-listen-btn {
+    position: absolute;  /* Position relative to the parent box */
+    top: 5px;            /* 5px from the top */
+    right: 5px;          /* 5px from the right */
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+    padding: 5px;
+}
+.alphabet-key-box:hover .alpha-listen-btn {
+    opacity: 1;
+}
+
+/* --- Vocabulary List Section --- */
+.vocab-list {
+    list-style: none;
+    padding: 0;
+}
+.vocab-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+.vocab-list li:last-child {
+    border-bottom: none;
+}
+.german-word {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* THE UPDATED STYLE: Round buttons for the vocab list */
+.vocab-list .listen-btn {
+    /* Shape and Size */
+    width: 40px;             /* A bit smaller than the main button */
+    height: 40px;
+    border-radius: 50%;      /* Make it a circle */
+    
+    /* Centering the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;       /* Adjust icon size */
+    
+    /* Colors and Animation */
+    background-color: #f8f9fa; /* A subtle light gray */
+    color: #495057;
+    border: 1px solid #e9ecef;
+    transition: all 0.2s ease; /* Smooth transition */
+}
+
+.vocab-list .listen-btn:hover {
+    background-color: #ff9933;
+    color: white;
+    transform: scale(1.1); /* Make it slightly bigger on hover */
+    box-shadow: 0 4px 10px rgba(255, 153, 51, 0.4); /* Add an orange glow */
+}
+
+.vocab-list .listen-btn:active {
+    transform: scale(0.95); /* A satisfying press effect */
+}
+
+/* ---- Word Tester & Translation Section ---- */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+#custom-text {
+    width: 100%;
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+#custom-text:focus {
+    outline: none;
+    border-color: #ff9933;
+}
+/* ---- Word Tester & Translation Section ---- */
+/* ... (other styles in this section remain the same) ... */
+
+#pronounce-btn {
+    /* Shape and Size */
+    width: 50px;             /* Set a fixed width */
+    height: 50px;            /* Set an equal height */
+    border-radius: 50%;      /* This is the magic that makes it a circle */
+    
+    /* Centering the icon inside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;       /* Make the icon a bit bigger */
+    
+    /* Colors and Animation (from before) */
+    background-color: #ff9933;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px #e68a1e;
+    transition: all 0.1s ease-in-out;
+}
+
+#pronounce-btn:hover {
+    background-color: #ffaa4d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px #e68a1e;
+}
+
+#pronounce-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #e68a1e;
+}
+#translation-result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+#translation-result-box.hidden {
+    display: none;
+}
+.translation-header {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #ff9933;
+    margin-bottom: 5px;
+}
+.translation-text {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* ---- Custom On-Screen Keyboard ---- */
+#custom-keyboard {
+    display: grid;
+    gap: 8px;
+    margin-top: 20px;
+    user-select: none;
+}
+.keyboard-row {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 8px;
+}
+.keyboard-key {
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid #ced4da;
+    transition: background-color 0.1s, border-color 0.1s, margin-top 0.1s;
+}
+.keyboard-key:active {
+    background-color: #adb5bd;
+    border-bottom-width: 1px;
+    margin-top: 2px;
+}
+.key-wide {
+    grid-column: span 2;
+}
+.key-capslock.active {
+    background-color: #5c85d6;
+    color: white;
+}
